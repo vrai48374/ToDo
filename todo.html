@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .todo-container {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
+      width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .input-area {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid grey;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      background: transparent;
+      color: white;
+    }
+
+    .input-area button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: #4caf50;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    .input-area button:hover {
+      background: #45a049;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      background: #222;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    ul li span {
+      flex: 1;
+    }
+
+    ul li button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .complete-btn {
+      background: #1976d2;
+      color: white;
+    }
+
+    .complete-btn:hover {
+      background: #1565c0;
+    }
+
+    .delete-btn {
+      background: #e53935;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background: #d32f2f;
+    }
+
+    /* Line-through style for completed todos */
+    .completed {
+      text-decoration: line-through;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo List</h1>
+  <div class="todo-container">
+    <div class="input-area">
+      <input type="text" id="todoInput" placeholder="Enter a task...">
+      <button id="addBtn">Add</button>
+    </div>
+    <ul id="todoList"></ul>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
